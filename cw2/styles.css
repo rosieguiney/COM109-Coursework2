@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFE7FD;
+}
+
+li, a, button {
+     font-family: "Tenor-sans", sans-serif;
+     font-weight: 500;
+     font-size: 16px;
+     color: #FFE7FD;
+     text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 5%;;
+    background-color: #E2A9F1;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav__links {
+    list-style: none;
+}
+ 
+.nav__links li {
+    display: inline-block;
+    padding: 0px 20px; 
+}
+
+.nav__links li:nth-child(1) {
+    padding: 0 20px 0 0; 
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+ }
+
+.nav__links li a:hover {
+    color: #8C52FF
+ }
+ 
+ button {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: #5CE1E6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+ }
+
+ button:hover {
+    background-color: rgba(0,136,169,0.8);
+ }
