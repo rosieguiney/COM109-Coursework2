@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffe7fd; 
+}
+
+/* layout */ 
+.main-content {
+    text-align: left;
+    padding-left: 50px;
+    padding: 20px;
+}
+
+.branding-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+
+
+/* main navigation bar code */
+.headernav {
+    overflow: hidden;
+    background-color: #e2a9f1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.headernav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-right: 3px solid rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.headernav a:last-of-type {
+    border-right: none;
+}
+
+.headernav a:hover,
+.headernav a:active {
+    background-color: #8c52ff;
+    color: #ffffff;
+    box-shadow: inset 0 -3px 0px rgba(140, 82, 255, 0.5);
+}
+
+/*search bar*/
+
+.headernav .search-container {
+    float: right;
+}
+
+.headernav input[type=text] {
+    padding: 6px 15px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 0;
+    outline: none;
+}
+
+.headernav .search-container button {
+    float: right;
+    padding: 7px 15px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #8c52ff;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: 0.3s;
+}
+
+.headernav .search-container button:hover {
+    background: #5ce1e6;
+}
+
+/*page content*/
+
+.logo {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin-left: 0;
+    margin-bottom: 0px;
+}
+
+
+.aboutus {
+    text-align: center;
+    width: 100%;
+    clear: both;
+    margin-top: 20px;
+    color: #8c52ff;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #8c52ff, #5ce1e6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 24px;
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.gradient-text:hover {
+    background: linear-gradient(90deg, #ff5ced, #8c52ff);
+    -webkit-background-clip: text;
+    background-clip: text; 
+}
+
+/*responsive mobile design, non boostrap currently*/
+
+@media screen and (max-width: 600px) {
+    .headernav .search-container {
+        float: none;
+    }
+    .headernav a, 
+    .headernav input[type=text], 
+    .headernav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .headernav input[type=text] {
+        border: 1px solid #ccc;  
+    }
+}
