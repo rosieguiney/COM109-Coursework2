@@ -25,9 +25,41 @@ window.onscroll = function() {scrollFunction()};
   } 
 
 
+/* When the user scrolls down page to the middle section, the paragraphs appear */ 
 
-  const scrollText = document.querySelector(".scroll-text");
+  document.addEventListener("DOMContentLoaded", function() {
+    let containers = document.querySelectorAll('.who-we-are-container, .stories-container');
 
-scrollText.innerHTML = scrollText.textContent.split("").map(char => {
-    return `<span class="hover-char">${char === " " ? "&nbsp;" : char}</span>`;
-}).join("");
+    let observerOptions = {
+        threshold: 0.4  /* User scrolls down to see the content */ 
+    };
+
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal-active');
+                observer.unobserve(entry.target);    
+            }
+        });
+    }, observerOptions);
+
+    containers.forEach(container => {
+        observer.observe(container);
+    });
+});
+  
+
+  /* Scroll down button */ 
+
+
+  /* accordian jQuery */
+  $( function() {
+    $( "#common-ground-accordion" ).accordion();
+  } );
+
+
+  
+
+
+
+  
