@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // =========================================
   // PAGE LOAD ENTRANCE ANIMATIONS
-  // =========================================
+  // ---------------------------------
   setTimeout(() => {
     if (document.querySelector(".box")) document.querySelector(".box").classList.add("show");
     if (document.querySelector(".LLBox")) document.querySelector(".LLBox").classList.add("show");
@@ -10,9 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }, 200);
 
 
-  // =========================================
   // CHAT PANEL OPEN / CLOSE 
-  // =========================================
+  // -------------------------
   const openBtn = document.getElementById('chat');
   const closeBtn = document.getElementById('exit');
   const chatWin = document.getElementById('chatPanel');
@@ -25,36 +23,31 @@ document.addEventListener("DOMContentLoaded", function () {
     closeBtn.onclick = () => chatWin.classList.remove("active");
   }
 
-
-  // =========================================
   // CHAT MESSAGES
-  // =========================================
+  // ----------------
 
   const chatMessages = document.querySelector('.chatMessages');
   const sendBtn = document.getElementById('sendButton');
   const chatInput = document.getElementById('chatInput');
 
 
-  // Send button click event
+  // When send button is clicked
   if (sendBtn) {
     sendBtn.onclick = function() {
         sendMessage(); // Sends user message to chat
     };
   }
 
-
-  // =========================================
   // BOT RESPONSE FUNCTION
-  // =========================================
+  // ---------------------------
   function botReply(userText) {
     const botDiv = document.createElement('div');
 
-    // Add bot styling + animation class
     botDiv.classList.add('bot-message', 'message');
 
     let reply = "I'm here to help! 😊";
 
-    // Simple keyword-based responses
+    // responses
     if (userText.toLowerCase().includes("stress")) {
       reply = "I'm sorry you're feeling stressed. Try taking a short break or deep breathing 💜";
     } else if (userText.toLowerCase().includes("help")) {
@@ -68,19 +61,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add bot message to chat window
     chatMessages.appendChild(botDiv);
 
-    // Trigger CSS animation after render
+    // animation
     setTimeout(() => {
       botDiv.classList.add("show");
     }, 10);
 
-    // Auto-scroll to latest message
+    // show latest message
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-
-  // =========================================
   // USER MESSAGE FUNCTION
-  // =========================================
+  // -----------------------
   function sendMessage() {
     const text = chatInput.value.trim();
 
@@ -92,26 +83,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
       chatMessages.appendChild(userDiv);
 
-      // Trigger animation for user message
+      // animation
       setTimeout(() => {
         userDiv.classList.add('show');
       }, 10);
 
-      // Clear input field
       chatInput.value = "";
 
-      // Scroll chat to bottom
+      // show latest message
       chatMessages.scrollTop = chatMessages.scrollHeight;
 
-      // Simulate bot typing delay
+      // bot typing delay
       setTimeout(() => botReply(text), 1000);
     }
   }
 
 
-  // =========================================
   // ENTER KEY / SEND MESSAGE
-  // =========================================
+  // ---------------------------
   chatInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault(); // Stops default form submission
@@ -121,10 +110,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-// =========================================
 // FORM VALIDATION FUNCTION
-// =========================================
+// -----------------------------
 function validateForm() {
   let errorMessage = '';
   let firstName = document.getElementById('firstName').value.trim();
@@ -148,13 +135,13 @@ function validateForm() {
   // Message field validation
   if (message == '') errorMessage += '<div>Message is required.</div>';
 
-  // Display errors if any exist
+  // Displays any eerrors
   if (errorMessage != '') {
     document.getElementById('errorMes').innerHTML = errorMessage;
     return false;
   }
 
-  // Success message
+  // Lets user know their form has been submitteds
   alert("Form submitted successfully!");
   return true;
 }
