@@ -261,6 +261,11 @@ h1 {
     border-radius: 3px;
 }
 
+.LRBox button:hover {
+  background-color: #FFE7FD;
+  color: #ad70bd;
+}
+
 /* =========================
    CHAT WINDOW
 ========================= */
@@ -318,6 +323,29 @@ h1 {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
+}
+
+/* MESSAGE INPUT */
+.chatArea input {
+    margin: 0 10px 10px 10px;
+    padding: 12px;
+    border: 2px solid #b2eaec;
+    border-radius: 6px;
+    outline: none;
+}
+
+.chatArea input:focus {
+    border-color: #8C52FF;
+}
+
+.chatFooter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chatFooter input {
+    flex: 1;
 }
 
 /* BOT MESSAGE STYLE */
