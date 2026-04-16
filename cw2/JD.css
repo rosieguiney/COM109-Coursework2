@@ -9,7 +9,6 @@ body {
     background-color: #ffe7fd; 
 
     scroll-behavior: smooth;
-    font-family: sans-serif;
 }
 
 /* layout */ 
@@ -19,9 +18,59 @@ body {
     padding-top: 20px;
 }
 
+.top-flex-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center; 
+    width: 100%;                
+    max-width: 1200px;        
+    margin: 0 auto;            
+}
+
+.top-content-row {
+    display: grid;
+    grid-template-columns: 1fr 450px 1fr;
+    align-items: center;   
+    width: 100%;
+    max-width: 1400px;      
+    margin: 40px auto 0;
+    gap: 40px;
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+}
+
+
+.student-image-column {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.student-support {
+    width: 100%;
+    max-width: 400px;          
+    height: auto;
+    margin-top: 60px;
+    border-radius: 15px;
+    border: 4px solid rebeccapurple;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);   
+    display: block;
+}
+
+
+
 .site-branding {
-     position: absolute;
-    top: 90px;
+    position: absolute;
+    top: 50%; 
+    transform: translateY(70%);
     left: 20px;
     display: flex;
     flex-direction: column;
@@ -29,8 +78,9 @@ body {
 }
 
 
+
 .page-length {
-    min-height: 2500px; /* can adjust this if its too long */
+    min-height: 2000px; /* can adjust this if its too long */
 }
 
 .page-divider {
@@ -70,9 +120,11 @@ body {
 
 .header-wrapper {
     position: relative;
-    min-height: 250px;
-    padding: 20px;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    width: 100%;
 }
 
 
@@ -170,10 +222,10 @@ body {
     font-weight: 500; 
     width: 100%;
     margin-top: 0 !important;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-top: 0;
     color: #8c52ff;
-    font-family: Tenor Sans;
+    font-family: 'Tenor Sans';
     font-size: 35px;
     letter-spacing: 2px;
     margin-left: 0px;
@@ -185,13 +237,12 @@ body {
         background-color: #ffffff;
         border: 2px solid #8c52ff;
         border-radius: 10px;
-        padding: 20px;
-        margin: 0 auto;
-        max-width: 410px;
-        width: 100%;
-        box-shadow: 0 4px 150x rgba(0,0,0,0.1);
+        padding: 25px;
+        width: 450px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         line-height: 1.6;
         text-align: left; 
+        margin: 0 auto;
 
         animation: fadeInUp 1s ease-out 0.3s forwards;
         opacity: 0;
@@ -292,35 +343,67 @@ body {
         transform: translateY(-1px);
     }
 
+/* middle section of the page */ 
 
     .middle-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
-        max-width: 1200px;
+        max-width: 1100px;
         margin: 60px auto;
-        padding: 0 20px;
-        align-items: start;
+        padding: 20px;
      }
 
     .who-we-are, .student-stories {
-        font-family: 'Tenor sans';
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        color: #8c52ff;
-        width: auto;
-        font-size: 35px;
+        font-family: 'Tenor Sans';
+        color: #4b2cb3;  
+        font-size: 28px;
         letter-spacing: 2px;
-        line-height: 1.6;
-        text-align: left;
-        margin-top: 0;
+        text-transform: uppercase;
+
+        text-align: center;
+        align-self: center;
+        margin: 0 auto 20px auto;   
+        
+        border-bottom: 2px solid #8c52ff;
+        padding-bottom: 5px;
     }
 
+
+    .who-we-are-container, .stories-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 10px;
+
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 20px; 
+        box-shadow: 0 10px 30px rgba(140, 82, 255, 0.1); /*  maybe blue? */
+        border: 1px solid rgba(140, 82, 255, 0.2);
+
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+
+    .reveal-active {
+        opacity: 1;
+        transform: translateY(0);
+
+    }
 
     .text-block-1, .text-block-2 p {
         font-size: 18px;
         line-height: 1.8;
-        color: #444;
-        text-align: left; 
+        color: #333;
+        margin-bottom: 15px;
+    }
+
+    b, strong {
+        color: #8c52ff;
+        font-weight: 700;
     }
 
 
@@ -330,25 +413,70 @@ body {
         justify-content: flex-start;
         align-items: flex-start;
         height: 100%;
+
+        transition-delay: 0.2s;
     }
 
-    .student-stories { 
-        margin-top: 0;
-        padding-top: 0;
-        text-align: center;
-        width: 100%;
-        font-family: 'Tenor Sans';
-        color: #8c52ff;
-         font-size: 35px;
-         letter-spacing: 2px;
-    }
 
     .student-title {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 800;
+        font-style: italic;
+        color: #555;
+        margin: 20px 0 10px 0; 
+        text-align: center;
+        align-self: center;
+    }
+
+    /* quote bar */ 
+
+    .quote-wrapper {
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .quote-container {
+        background-color: #a2d2ff;
+        padding: 40px 60px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(140, 82, 255, 0.2);
+        cursor: default;
+        width: 100%;
+    }
+
+    .quote-text {
+        font-size: 24px;
+        font-weight: 600;
         color: #333;
-        margin: 0 0 10px 0; 
-        text-align: left; 
+        text-align: center;
+        margin: 0;
+        line-height: 1.4;
+        font-family: 'Tenor Sans', sans-serif;
+        flex: 1;
+    }
+    .quote-icon {
+        font-size: 30px;
+        color: #4b2cb3;
+        opacity: 0.6;
+    }
+
+    /* Mobile Responsiveness */
+    @media screen and (max-width: 800px) {
+        .quote-container {
+            padding: 30px;
+            flex-direction: column;
+        }
+
+    .quote-text {
+        font-size: 18px;
     }
 
 
@@ -356,7 +484,3 @@ body {
 
 
 
-
-
-
-    
