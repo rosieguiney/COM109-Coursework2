@@ -108,40 +108,82 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // ERROR POP UP
+  // ------------
+  const popup = document.getElementById('errorPopup');
+  const closePopup = document.getElementById('closePopup');
+
+  if (closePopup) {
+    closePopup.onclick = function () {
+      popup.style.display = 'none';
+    };
+  }
+
+  // RUN VALIDATION
+  const form = document.querySelector('form[name="Contact"]');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // stops refresh
+
+      validateForm();
+    });
+  }
+
 });
 
 // FORM VALIDATION FUNCTION
 // -----------------------------
 function validateForm() {
-  let errorMessage = '';
-  let firstName = document.getElementById('firstName').value.trim();
-  let lastName = document.getElementById('lastName').value.trim();
-  let email = document.getElementById('email').value.trim();
-  let message = document.getElementById('message').value.trim();
+  let errors = [];
 
-  // Required field checks
-  if (firstName == '') errorMessage += '<div>First Name is required.</div>';
-  if (lastName == '') errorMessage += '<div>Last Name is required.</div>';
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const phone = document.getElementById('phonenum').value.trim();
+  const dob = document.getElementById('dob').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const message = document.getElementById('message').value.trim();
 
-  // Email validation pattern
-  let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+  if (firstName === '') errors.push("First Name is required.");
+  if (lastName === '') errors.push("Last Name is required.");
 
+  if (phone === '') errors.push("Phone Number is required.");
+
+  if (dob === '') errors.push("Date of Birth is required.");
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (email === '') {
-    errorMessage += '<div>Email is required.</div>';
+    errors.push("Email is required.");
   } else if (!emailPattern.test(email)) {
-    errorMessage += '<div>Please enter a valid email address.</div>';
+    errors.push("Invalid email address.");
   }
 
-  // Message field validation
-  if (message == '') errorMessage += '<div>Message is required.</div>';
+  if (address === '') errors.push("Address is required.");
+  if (message === '') errors.push("Message is required.");
 
-  // Displays any eerrors
-  if (errorMessage != '') {
-    document.getElementById('errorMes').innerHTML = errorMessage;
+  if (errors.length > 0) {
+    showErrors(errors);
     return false;
   }
 
-  // Lets user know their form has been submitteds
   alert("Form submitted successfully!");
   return true;
+}
+
+// FORM ERRORS
+// -----------
+function showErrors(errors) {
+  const popup = document.getElementById('errorPopup');
+  const popupErrors = document.getElementById('popupErrors');
+
+  popupErrors.innerHTML = '';
+
+  errors.forEach(error => {
+    const div = document.createElement('div');
+    div.textContent = error;
+    popupErrors.appendChild(div);
+  });
+
+  popup.style.display = 'flex';
 }
