@@ -41,10 +41,10 @@ $(document).ready(function () {
     // =========================
     // SEARCH BAR
     // =========================
-    $('.search-container form').on('submit', function (e) {
+    $('.navbar__search form').on('submit', function (e) {
         e.preventDefault();
 
-        const term = $(this).find('input[name="search"]').val().toLowerCase();
+        const term = $(this).find('.search__input').val().toLowerCase();
         const content = $('.middle-content, .bottom-section-container');
 
         $('mark').contents().unwrap();
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
             if ($('mark').length > 0) {
                 $('html, body').animate({
-                    scrollTop: $("mark").first().offset().top - 100
+                    scrollTop: $("mark").first().offset().top - 120
                 }, 500);
             }
         }

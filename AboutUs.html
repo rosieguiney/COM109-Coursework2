@@ -3,30 +3,63 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About Us</title>
-    <link rel="stylesheet" href="TEST.css">
+    <title>About Us | Stress Less</title>
+
+    <link rel="stylesheet" href="JD.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&family=Tenor+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="x-icon">
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
-<body>
-    
-    <div class="headernav">
-        <a class="active" href="#home">Home</a> 
-        <a href="#contact">Contact</a>
-        <a href="#aboutus">About us </a>
-        <a href="#resources">Resources</a>
-        <a href="#copingtools">Coping tools</a>
 
-        <div class="search-container">
-            <form action="#">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+<body>
+    <nav class="navbar">
+    <div class="navbar__container">
+
+
+        <a href="/" id="navbar__logo">STRESS LESS</a>
+
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
+
+    
+
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="/" class="navbar__links">Home</a>
+            </li>
+
+            <li class="navbar__item">
+                <a href="/" class="navbar__links">About Us</a>
+            </li>
+
+            <li class="navbar__item">
+                <a href="/" class="navbar__links">Coping Tools</a>
+            </li>
+
+            <li class="navbar__item">
+                <a href="/" class="navbar__links">Resources</a>
+            </li>
+
+            <li class="navbar__search">
+                <form action="#">
+                    <input type="text" placeholder="Search..." class="search__input">
+                    <button type="submit" class="search__btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </li>
+            <li class="navbar__btn">
+                <a href="contactHTML.html" class="button">Contact Us</a>
+            </li>
+        </ul>
     </div>
+</nav>
+
+
 
     <div class="header-wrapper">
         <div class="site-branding">
@@ -38,7 +71,8 @@
 
 
     <div class="top-content-row">
-    <div></div> 
+        <div></div>
+     
 
     <div class="center-column">
         <h2 class="about-us-title">ABOUT OUR BRAND</h2>
@@ -48,7 +82,7 @@
     </div>
 
     <div class="student-image-column">
-        <img src="images/student-support.jpg" class="student-support" alt="Student support image">
+        <img src="images/student-support.jpg" class="student-support" alt="Student talking to staff in a support session">
     </div>
 </div>
 
@@ -80,7 +114,7 @@
 
             <h4 class="student-title">Adrian - Computing Science at Ulster University, Belfast.</h4>
             <div class="text-block-2">
-                <p> After hearing recommendations from some of my mates, I turned to <b> StressLess </b> when I was discouraged and needed to alleviate pressure in managing coursework, exams, studying and balancing social life. I used their <b> grounding techniques </b> such as focusing on my breathing and the <b> 3-3-3 rule </b> which helped me stay in the moment and relieve my<b> anxiety. </b></p>
+                <p> After hearing recommendations from some of my mates, I turned to <b> StressLess </b> when I was discouraged and needed to alleviate pressure in managing coursework, exams, studying and balancing social life. I used their <b> grounding techniques </b> such as focusing on my breathing and the <b> 3-3-3 rule </b> which helped me stay in the moment and relieve my <b> anxiety. </b></p>
 
                 <p> StressLess also provided me with additional resources including <b> guided meditation </b> and personal <b> 1-1 counselling </b> sessions in the future. Ultimately, this site aided me in clearing my mind, leaving me being more present in life. </p>
             </div>
@@ -103,7 +137,7 @@
     <div class="bottom-section-container">
     <div class="flex-row">
     <div class="accordion-wrapper">
-        <p class="accordion-title">How are you feeling?</p>
+        <h2 class="accordion-title">How are you feeling?</h2>
 
         <div class="accordion-description">
         <p> <b> We know University life is challenging. Click on a student response below to explore science-backed tips help you stay in control of your wellbeing. </b> </p> 
@@ -117,7 +151,7 @@
 
             <h4>"I feel stuck by a deadline"</h4>
             <div>
-                <p> Deadlines can be pressuring and stressful. To reduce this anxiety, find a relaxing enviroment where you are most comfortable. Focus on a single task at a time, creating healthy work habits. Remember, pace yourself and take a few minutes, and hour or a whole day. Once refreshed, it will be much easier to work on.  </p>
+                <p> Deadlines can be pressuring and stressful. To reduce this anxiety, find a relaxing environment where you are most comfortable. Focus on a single task at a time, creating healthy work habits. Remember, pace yourself and take a few minutes, and hour or a whole day. Once refreshed, it will be much easier to work on.  </p>
             </div>
 
             <h4>"I'm having a hard time focusing lately"</h4>
@@ -134,7 +168,7 @@
 
             <h4>"I feel guilty for taking a break"</h4>
             <div>
-                <p>This feeling can come when your under a lot of stress. For your best productivity, take scheduled breaks in the day so that your mind and body can get the rest it needs. This not only prevents burnout, but improves focus and overall well-being. Remember, breaks are neccesary. </p>
+                <p>This feeling can come when you're under a lot of stress. For your best productivity, take scheduled breaks in the day so that your mind and body can get the rest it needs. This not only prevents burnout, but improves focus and overall well-being. Remember, breaks are necessary. </p>
             </div>
             <h4>"I'm under a lot of pressure right now" </h4>
             <div> 
@@ -160,7 +194,7 @@
         </div>
 
         <div id="crisis-msg" style="display:none;">
-            <p> <strong>It sounds like your having a hard time right now. </strong> Please, reach out to these resources: <br> Lifeline: 0808 808 8000 <br> Samaritans: 116 123</p> 
+            <p> <strong>It sounds like you're having a hard time right now. </strong> Please, reach out to these resources: <br> Lifeline: 0808 808 8000 <br> Samaritans: 116 123</p> 
         </div>
 
         <div id="milestone-feed"></div>
@@ -168,7 +202,7 @@
 
     </div> </div>
 
-    <button class="chat-button">💬</button>
+    <button class="chat-button" aria-label="Open chat">💬</button>
 
 
 <div class="chatArea">
