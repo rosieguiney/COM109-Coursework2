@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Less Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="x-icon" href="favicon.ico">
+</head>
+    <body>
+    <!--NavBar Section-->
+        <nav class="navbar">
+            <div class="navbar__container">
+            <a href="" id="navbar__logo">STRESS LESS</a> 
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="AboutUs.html" class="navbar__links">About Us</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="breathing.html" class="navbar__links">Coping Tools</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="html2.html " class="navbar__links">Resources</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="contactHTML.html" class="button">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <!--Hero Section-->
+    <div class="main">
+        <div class="main__container">
+            <div class="main__content">
+                <h1>STRESS</h1>
+                <h1>LESS</h1>
+                <h2>So You Can Learn More.</h2>
+                <button class="main__btn"><a href="AboutUs.html">About Us</a></button>
+                    <div class="quote-box">
+                        <p id="quoteText"> Feeling stressed?</p>
+                        <button id="newQuoteBtn">Click Me!</button>
+                    </div>
+            </div>
+            <div class="main__img--container">
+                <img src="pic1.svg" alt="Illustration showing a calm and relaxed study environment" id="main__img">
+            </div>
+        </div>
+    </div>
+
+<!-- Services Section-->
+<div class="services">
+
+    <div class="intro-block">
+        <h2>Feeling overwhelmed with school?</h2>
+        <p>
+            Balancing assignments, deadlines, and everything else can feel like a lot.
+            You're not alone and it doesn’t have to stay that way.
+        </p>
+        <p>
+            Take a moment to reset with simple breathing techniques, or explore our resources designed 
+            to help you manage stress and stay focused.
+        </p>
+    </div>
+
+    <div class="services__container">
+        <div class="services__card">
+            <h3>Take Control</h3>
+            <p>Follow our breathing techniques</p>
+            <a href="breathing.html" class="main__btn">Coping Tools</a>   
+        </div>
+
+        <div class="services__card">
+            <h3>Extra Support</h3>
+            <p>For more information</p>
+            <a href="html2.html" class="main__btn">Resources</a>   
+        </div>
+    </div>
+
+</div>
+        <button onclick="topFunction()" id="navBtn" title="Navigation button">Back to top</button>
+    <script>
+	    window.onscroll = function() {scrollFunction()};
+
+	    /*When the user scrolls down 300px from the top of the document, show the button */
+
+	    function scrollFunction() {
+		    let navbutton = document.getElementById("navBtn");
+		    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+			    navbutton.style.display = "block";
+		    } else {
+			    navbutton.style.display = "none";
+		    }
+	    }
+
+        /*When the user clicks on the button, scroll to the top of the document*/
+        function topFunction() {
+  	        window.scrollTo({top: 0, behavior: 'smooth'});
+        } 
+    </script>
+<!-- Testimonials -->
+ <section class="testimonials">
+    <div class="section-header">
+        <h2>What students are saying</h2>
+        <div class="section-divider"></div>
+    </div>
+    <div class="user-comments">
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="student1.jpg" alt="Chloe smiling student describing reduced exam stress using coping tools">
+                <div>
+                    <p>"I used to feel really overwhelmed with schoolwork, especially around exams. The breathing tools and resources on this site actually helped me calm down and focus again. I use them before tests now and it makes a big difference."</p>
+                    <h3>Chloe Smith</h3>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="student2.jpg" alt="Harry, a student sharing positive experience using stress relief techniques">
+                <div>
+                    <p>"I like how simple everything is. When I’m feeling stressed, I just use one of the tools and it helps me clear my head and get back to work."</p>
+                    <h3>Harry Collins</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="comment-box">
+        <h2>Leave your own comment</h2>
+        <p>We would love to get feedback on your experience.</p>
+
+        <form class="comment-form">
+            <input type="text" placeholder="Your name" required>
+            <textarea rows="4" placeholder="Your comment" required></textarea>
+            <button type="submit" class="main__btn">Post Comment</button>
+        </form>
+    </div>
+
+</section>
+
+<!--Map Location-->
+<section class="map-contact">
+
+    <div class="contact-heading">
+        <h1>We're here to help</h1>
+        <p>
+            If you're feeling overwhelmed or just have a question, reach out we're here for you.
+        </p>
+    </div>
+
+    <div class="map-contact__container">
+
+        <!-- Map -->
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2311.418235177352!2d-5.928553330819254!3d54.59662440000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48610855fe1c4fcb%3A0x9ca60dad0fb8b2bd!2smontgomery%20house%2C%20Montgomery%20St%2C%20Belfast%20BT1%204NX!5e0!3m2!1sen!2suk!4v1776523328683!5m2!1sen!2suk" title="Map showing Montgomery House, Belfast location" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-col">
+            <div class="contact-item">
+                <i class="fa-solid fa-house"></i>
+                <span>
+                    <p>Montgomery House</p>
+                    <h5>Montgomery St, Belfast BT1 4NX</h5>
+                </span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                    <p>07987 654321</p>
+                    <h5>Monday–Friday: 9am–5pm</h5>
+                </span>
+            </div>
+
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span>
+                    <p>help@stressless.com</p>
+                    <h5>Email us your query</h5>
+                </span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Lower right box -->
+<button class="chat-button">💬</button>
+
+<div class="chatArea">
+    <div class="chatBar">
+        Chat
+        <button id="exit">X</button>
+    </div>
+
+    <div class="chatMessages"></div>
+
+    <div class="chatFooter">
+        <input id="chatInput" type="text" placeholder="Type a message...">
+        <button id="sendButton">Send</button>
+    </div>
+</div>
+
+
+<!-- Footer Section -->
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper"> 
+            <div class="footer__links--items">
+                <h2>About Us</h2>
+                <a href="AboutUs.html">What we do</a>
+            </div>
+
+            <div class="footer__links--items">
+                <h2>Support</h2>
+                <a href="contactHTML.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer__link--wrapper">
+            <div class="footer__links--items">
+                <h2>Resources</h2>
+                <a href="html2.html">Articles</a>
+                <a href="html2.html">Guides</a>
+            </div>
+
+            <div class="footer__links--items">
+                <h2>Social Media</h2>
+                <a href="/">Instagram</a>
+                <a href="/">TikTok</a>
+                <a href="/">X</a>
+                <a href="/">YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo">STRESS LESS</a>
+            </div>
+
+            <div class="social__icons">
+                <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+                <a href="/" class="social__icon--link"><i class="fab fa-tiktok"></i></a>
+                <a href="/" class="social__icon--link"><i class="fab fa-x-twitter"></i></a>
+                <a href="/" class="social__icon--link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <script src="app.js"></script>
+    </body> 
+</html>
