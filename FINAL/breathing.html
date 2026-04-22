@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stress Less</title>
+<link rel="icon" type="x-ico" href="favicon.ico">
+<link rel="stylesheet" href="breathing.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+            <div class="navbar__container">
+            <a href="" id="navbar__logo">STRESS LESS</a> 
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a href="index.html" class="navbar__links">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="AboutUs.html" class="navbar__links">About Us</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="breathing.html" class="navbar__links">Coping Tools</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="html2.html" class="navbar__links">Resources</a>
+                    </li>
+                    <li class="navbar__btn">
+                        <a href="contactHTML.html" class="button">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+            <button class="chat-button">💬</button>
+
+      <div class="chatArea">
+    <div class="chatBar">
+        Chat
+        <button id="exit">X</button>
+    </div>
+
+    <div class="chatMessages"></div>
+
+    <div class="chatFooter">
+        <input id="chatInput" type="text" placeholder="Type a message...">
+        <button id="sendButton">Send</button>
+    </div>
+    </div>
+
+    <img src="SL-Logo.png" alt="Stress Less logo">
+
+
+    <div class="container">
+
+    <div class="controls">
+
+        <div class="settings">
+
+        <div class="form-group">
+        <label for="pattern">Breathing Method</label>
+        <select id="pattern" aria-required="true">
+            <option value="" disabled selected>Select method</option>
+            <option value="478">4-7-8 Breathing</option>
+            <option value="box">Box Breathing</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="level">Difficulty Level</label>
+        <select id="level" aria-required="true">
+            <option value="" disabled selected>Select level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+    </div>
+
+    </div>
+
+    <p id="formError" class="error-message" aria-live="polite"></p>
+        <button id="startBtn">Start</button>
+    </div>
+
+    <div class="breathing-container">
+        <div class="circle" id="circle"></div>
+        <div class="instructions">
+            <span id="breathText">Ready</span>
+            <span id="timer">0</span>
+        </div>
+    </div>
+</div>
+
+<div class="recommend-section">
+    <h3>Recommend a Breathing Technique</h3>
+
+    <div class="form-group">
+        <label for="recommendInput">Your technique</label>
+
+        <input 
+          type="text" 
+          id="recommendInput" 
+          placeholder="e.g. 5-5 breathing"
+          aria-required="true"
+          aria-describedby="recommendHelp">
+
+        <small id="recommendHelp">
+            Enter a breathing pattern (e.g. inhale-exhale timing)
+        </small>
+    </div>
+
+    <button id="recommendBtn" aria-label="Submit recommendation">
+        Submit
+    </button>
+
+    <ul id="recommendList"></ul>
+    </div>
+    <div id="popup" class="popup" role="dialog" aria-modal="true" aria-labelledby="popupMessage">
+    <div class="popup-content">
+        <p id="popupMessage">
+        Thank you for your recommendation! We will try to implement this technique soon.
+        </p>
+        <button id="closePopup">Close</button>
+    </div>
+</div>
+
+<div class="text-section">
+    
+
+<p>
+The 4-7-8 breathing technique is a simple relaxation method that helps calm the mind and body.
+ It involves inhaling quietly through the nose for 4 seconds, holding the breath for 7 seconds, and then exhaling slowly through the mouth for 8 seconds.
+  This pattern encourages deeper breathing, reduces stress, and can even help with falling asleep more quickly when practiced regularly.
+  For this particular excerise we have changed the times to accomdate all levels
+</p>
+
+<p>
+Box breathing, also known as square breathing, is a technique used to promote focus and relaxation. 
+It consists of inhaling for 4 seconds, holding the breath for 4 seconds, exhaling for 4 seconds, and holding again for 4 seconds before repeating the cycle. 
+This structured rhythm helps regulate breathing, lower anxiety, and improve concentration, making it popular among athletes and professionals in high-pressure situations.
+</p>
+
+</div>
+
+
+<div class="footer__container">
+    <div class="footer__links">
+        <div class="footer__link--wrapper">
+            <div class="footer__links--items">
+                <h2>About Us</h2>
+                <a href="AboutUs.html">What we do</a>
+            </div>
+
+            <div class="footer__links--items">
+                <h2>Support</h2>
+                <a href="contactHTML.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer__link--wrapper">
+            <div class="footer__links--items">
+                <h2>Resources</h2>
+                <a href="html2.html">Articles</a>
+                <a href="html2.html">Guides</a>
+            </div>
+
+            <div class="footer__links--items">
+                <h2>Social Media</h2>
+                <a href="/">Instagram</a>
+                <a href="/">TikTok</a>
+                <a href="/">X</a>
+                <a href="/">YouTube</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="social__media">
+        <div class="social__media--wrap">
+            <div class="footer__logo">
+                <a href="/" id="footer__logo">STRESS LESS</a>
+            </div>
+
+            <div class="social__icons">
+                <a href="/" class="social__icon--link"><i class="fab fa-instagram"></i></a>
+                <a href="/" class="social__icon--link"><i class="fab fa-tiktok"></i></a>
+                <a href="/" class="social__icon--link"><i class="fab fa-x-twitter"></i></a>
+                <a href="/" class="social__icon--link"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body> 
+
+        <button onclick="topFunction()" id="navBtn" title="Navigation button">Back to top</button>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+
+        function scrollFunction() {
+            let navbutton = document.getElementById("navBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                navbutton.style.display = "block";
+            } else {
+                navbutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        } 
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
